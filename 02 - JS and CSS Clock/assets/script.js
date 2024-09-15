@@ -16,8 +16,7 @@ function setDate() {
   const hours = currentTime.getHours();
   const hourDegrees = (hours / 12) * 360;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-
-  // console.log(seconds, minutes, hours, hourDegrees);
 }
 
 setInterval(setDate, 1000);
+setDate();  // Initial call to set hands on page load
