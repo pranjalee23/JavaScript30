@@ -19,9 +19,27 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://images.unsplash.com/photo-1725714834589-63c447c90a8a?q=80&w=700&auto=format&fit=crop" alt="Main Image">
 
   <style>
+    :root {
+      --base: #ffc600;
+      --blur: 10px;
+      --spacing: 10px;
+    }
+
+    img {
+      padding: var(--spacing);
+      filter: blur(var(--blur));
+      background-color: var(--base);
+      box-sizing: border-box;
+      width: 700px;
+      height: 500px;
+    }
+
+    .hl {
+      color: var(--base);
+    }
 
     /*
       misc styles, nothing to do with CSS variables
@@ -46,6 +64,17 @@
   </style>
 
   <script>
+    let input = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      // console.log(this);
+
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    input.forEach(input => input.addEventListener('change', handleUpdate));
+
   </script>
 
 </body>
