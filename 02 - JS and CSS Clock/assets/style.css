@@ -60,6 +60,7 @@ body {
 .second-hand {
   height: 2px;
   transition-timing-function: cubic-bezier(0.1, 2.6, 0.56, 1);
+  /* background-color: rgb(209, 10, 10); */
 }
 
 .min-hand {
