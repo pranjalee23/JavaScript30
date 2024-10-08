@@ -3,6 +3,8 @@ const endpoint =
 
 const cities = [];
 
-fetch(endpoint).then((blob) =>
-  blob.json().then((data) => cities.push(...data))
-);
+// fetch(endpoint).then((blob) =>
+//   blob.json().then((data) => cities.push(...data))
+// );
+
+// Just checking whether I can merge PR from CLI directly, without opening github.com 
